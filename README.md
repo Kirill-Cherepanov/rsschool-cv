@@ -1,1 +1,0 @@
-https://KissMyUSSR.github.io/rsschool-cv/cv
