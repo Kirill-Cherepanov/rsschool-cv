@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cherepanov Kirill CV</title>
+    <link rel="stylesheet" href="assets/styles/normalize.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class='container'>
+        <!--- Можно где-то заменить <div class='sub-header'></div> на h3 -->
+                <span class='me'></span>
+                <span class='my-abilities'></span>
+                <span class='education-and-Languages'></span>
+            </nav>
+        <section class='me'>
+            <nav>
+            <header>
+                <img src='assets/images/Portrait.jpg' alt='avatar' width='300' height='300'>
+                <h1>Kirill Cherepanov</h1>
+                <h2>Front-end Developer (Beginner)</h2>
+            </header>
+            <div class="contacts">
+                <h3>Contacts</h3>
+                <ul class='contacts'>
+                    <li><b>Location:</b> Belarus, Minsk</li>
+                    <li><b>Email:</b> cherkirr@gmail.com</li>
+                    <li><b>GitHub:</b> @KissMyUSSR</li>
+                    <li><b>VK:</b> <a href="https://vk.com/kcherepanov1">kcherepanov1</a></li>
+                    <li><b>Discord:</b> Kot-pauk#6737</li>
+                </ul>
+            </div>
+            <div class='about-me'>
+                <h3>About me</h3>
+                <p>
+                    I used to play a lot of video games for the entirety of my life, but one horrible day I realized that my PC sucks and I can no longer play my games. Thus I strongly decided to become a web developer to earn some money for a living and for a new PC to proceed with my beloved lifestyle.
+                </p>
+                <p>
+                    Just joking. I'm a reliable person and I love helping others. One may even call me altruistic, though I am not willing to help others when it might hurt myself. I love learning new stuff and new technologies. And if I like doing something, I may spend 16 hours a day doing it (if I have all this time). Also, I'm quite good at Math and it comes easily for me. Also I have a nice English level, but later on that.
+                </p>
+            </div>
+        </section>
+        <section class='my-abilities'>
+            <div class="code-example">
+                <h3>Code example</h3>
+                <pre>
+                    <code>
+// It's mildly inafficient but idc for now.
+
+function sliceColumn(mat, index) {
+let column = [];
+for (let i = 0; i < mat.length; i++) {
+    column.push(mat[i][index]);
+}
+return column;
+}
+function validSolution(board) {
+let checkArr = [];
+for (let i = 0; i < 9; i++) {
+    for (let j = 0; j < 9; j++) {
+    if ((board[i].slice(0, j) + 
+            board[i].slice(j + 1, 9)).includes(board[i][j])) return false;
+    if ((sliceColumn(board, i).slice(0, j) + 
+            sliceColumn(board, i).slice(j + 1, 9)).includes(board[j][i])) return false;
+    }
+}
+for (let i = 0; i < 7; i+=3) {
+    for (let j = 0; j < 7; j+=3) {
+    for(let t = 0; t < 9; t++) {
+        if ( checkArr.includes(board[i + t % 3][j + (t - t % 3)/3]) ) return false;
+        checkArr.push(board[i + t % 3][j + (t - t % 3)/3]);
+    }
+    checkArr = [];
+    }
+}
+
+return true;
+}
+                    </code>
+                </pre>
+            </div>
+            <div class="my-skills">
+                <h3>My skills</h3>
+                <ul class='stat-list'> <!-- Class можно изменить -->
+                    <li>
+                        <h4>HTML5</h4>
+                        <p>90%</p>
+                        <div class="scale">
+                            <span class="scale-filling"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>CSS3</h4>
+                        <p>70%</p>
+                        <div class="scale">
+                            <span class="scale-filling"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Javascript</h4>
+                        <p>50%</p>
+                        <div class="scale">
+                            <span class="scale-filling"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Python</h4>
+                        <p>60%</p>
+                        <div class="scale">
+                            <span class="scale-filling"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>С++</h4>
+                        <p>50%</p>
+                        <div class="scale">
+                            <span class="scale-filling"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Git</h4>
+                        <p>40%</p>
+                        <div class="scale">
+                            <span class="scale-filling"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Playing games & binge-watching anime</h4>
+                        <p>200%</p>
+                        <div class="scale">
+                            <span class="scale-filling"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class='education-and-languages'>
+            <div class='languages'>
+                <h3>Languages</h3>
+                <!-- ЗАМЕНИТЬ НА ТАБЛИЦУ !!!!! -->
+                <!-- ЗАМЕНИТЬ НА ТАБЛИЦУ !!!!! -->
+                <!-- ЗАМЕНИТЬ НА ТАБЛИЦУ !!!!! -->
+                <!-- ЗАМЕНИТЬ НА ТАБЛИЦУ !!!!! -->
+                <!-- ЗАМЕНИТЬ НА ТАБЛИЦУ !!!!! -->
+                <ul class="languages-list">
+                    <li>
+                        <div class="language-name">
+                            <h4>English</h4>
+                            <h5>B2-C1</h5>
+                        </div>
+                        <p>
+                            I'm quite profficient at it and the online tests that I participated in showed that I have an advanced C1-C2 level. Though I don't trust these tests much and I've never taken any reliable tests e.g. CEFR, IELTS or something
+                        </p>
+                    </li>
+                    <li>
+                        <div class="language-name">
+                            <h4>Русский (Russian)</h4>
+                            <h5>Native</h5>
+                        </div>
+                        <p>
+                            I've been speaking Russian since a young age so, I'm good at it. I scored 84/100 on our national exam without much preparation
+                        </p>
+                    </li>
+                    <li>
+                        <div class="language-name">
+                            <h4>日本 (Japanese)</h4>
+                            <h5>Beginner</h5>
+                        </div>
+                        <p>
+                            I only know the very basics, but I'd really like to learn it if I had enough time
+                        </p>
+                    </li>
+                    <li>
+                        <div class="language-name">
+                            <h4>Беларускi (Belarussian)</h4>
+                            <h5>Embarassingly bad</h5>
+                        </div>
+                        <p>
+                            Even though I'm Belarussian, I know Japanese better than my "native" language, because I never learned it at school and none of my acquaintances talk on it
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class='education'>
+                <h3>Education</h3>
+                <ul class="education-list"> <!-- Можно увеличить количество li -->
+                    <li>
+                        <h4>BSU, Mech. & Math. Fac., 2nd course</h4>
+                        <img src="" alt="">
+                    </li>
+                    <li>
+                        <h4>education...</h4> <!-- ХЗ -->
+                        <img src="" alt="">
+                    </li>
+                    <li>
+                        <h4>education...</h4> <!-- ХЗ -->
+                        <img src="" alt="">
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <footer>
+            <ul class="footer-links"> <!-- Как оставить ссылку на дискорд? -->
+                <li>VK</li>
+                <li>GitHub</li>
+                <li>RSS</li>
+                <li>Discord</li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>
