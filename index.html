@@ -8,33 +8,42 @@
     <link rel="stylesheet" href="assets/styles/normalize.css">
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class='container'>
-        <!--- Можно где-то заменить <div class='sub-header'></div> на h3 -->
-                <span class='me'></span>
-                <span class='my-abilities'></span>
-                <span class='education-and-Languages'></span>
-            </nav>
         <section class='me'>
-            <nav>
             <header>
-                <img src='assets/images/Portrait.jpg' alt='avatar' width='300' height='300'>
+                <img src='assets/images/Portrait.jpg' alt='avatar' width='250' height='250'>
                 <h1>Kirill Cherepanov</h1>
                 <h2>Front-end Developer (Beginner)</h2>
-            </header>
-            <div class="contacts">
-                <h3>Contacts</h3>
-                <ul class='contacts'>
-                    <li><b>Location:</b> Belarus, Minsk</li>
-                    <li><b>Email:</b> cherkirr@gmail.com</li>
-                    <li><b>GitHub:</b> @KissMyUSSR</li>
-                    <li><b>VK:</b> <a href="https://vk.com/kcherepanov1">kcherepanov1</a></li>
-                    <li><b>Discord:</b> Kot-pauk#6737</li>
-                </ul>
+                <div class="contacts">
+                    <h3>Contacts</h3>
+                    <table class='contacts'>
+                        <tr>
+                            <th><b>Location</b></th>
+                            <td>Belarus, Minsk</th>
+                        </tr>
+                        <tr>
+                            <th><b>Email</b></th>
+                            <td><a href="mailto:cherkirr@gmail.com">cherkirr@gmail.com</a></th>
+                        </tr>
+                        <tr>
+                            <th><b>GitHub</b></th>
+                            <td><a href="https://github.com/KissMyUSSR">@KissMyUSSR</a></th>
+                        </tr>
+                        <tr>
+                            <th><b>VK</b></th>
+                            <td><a href="https://vk.com/kcherepanov1">/kcherepanov1</a></th>
+                        </tr>
+                        <tr>
+                            <th><b>Discord</b></th>
+                            <td>Kot-pauk#6737</th>
+                        </tr>
+                    </table>
             </div>
+            </header>
             <div class='about-me'>
                 <h3>About me</h3>
                 <p>
@@ -43,6 +52,9 @@
                 <p>
                     Just joking. I'm a reliable person and I love helping others. One may even call me altruistic, though I am not willing to help others when it might hurt myself. I love learning new stuff and new technologies. And if I like doing something, I may spend 16 hours a day doing it (if I have all this time). Also, I'm quite good at Math and it comes easily for me. Also I have a nice English level, but later on that.
                 </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro delectus nihil, magni iste cumque nisi voluptates ipsa dolores enim tempora laudantium, obcaecati ratione dolorum? Molestias nulla aspernatur error deleniti doloribus, tempora nesciunt modi obcaecati est fugit nihil. Aliquid corrupti ex exercitationem at quam magnam nesciunt ea, molestias mollitia! Dolorem nemo nisi sunt, dolor culpa eos quas at expedita dicta iste?
+                </p>
             </div>
         </section>
         <section class='my-abilities'>
@@ -50,38 +62,42 @@
                 <h3>Code example</h3>
                 <pre>
                     <code>
-// It's mildly inafficient but idc for now.
+// It's mildly inafficient but idc for now
 
 function sliceColumn(mat, index) {
-let column = [];
-for (let i = 0; i < mat.length; i++) {
+  let column = [];
+  for (let i = 0; i < mat.length; i++) {
     column.push(mat[i][index]);
-}
-return column;
+  }
+  return column;
 }
 function validSolution(board) {
-let checkArr = [];
-for (let i = 0; i < 9; i++) {
+  let checkArr = [];
+  for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; j++) {
-    if ((board[i].slice(0, j) + 
-            board[i].slice(j + 1, 9)).includes(board[i][j])) return false;
-    if ((sliceColumn(board, i).slice(0, j) + 
-            sliceColumn(board, i).slice(j + 1, 9)).includes(board[j][i])) return false;
+      if ((board[i].slice(0, j) + 
+        board[i].slice(j + 1, 9)).includes(board[i][j])) {
+        return false;
+      }
+      if ((sliceColumn(board, i).slice(0, j) + 
+        sliceColumn(board, i).slice(j + 1, 9)).includes(board[j][i])) {
+        return false;
+      }
     }
-}
-for (let i = 0; i < 7; i+=3) {
+  }
+  for (let i = 0; i < 7; i+=3) {
     for (let j = 0; j < 7; j+=3) {
-    for(let t = 0; t < 9; t++) {
-        if ( checkArr.includes(board[i + t % 3][j + (t - t % 3)/3]) ) return false;
+      for(let t = 0; t < 9; t++) {
+        if (checkArr.includes(board[i + t % 3][j + (t - t % 3)/3])) {
+          return false;
+        }
         checkArr.push(board[i + t % 3][j + (t - t % 3)/3]);
+      }
+      checkArr = [];
     }
-    checkArr = [];
-    }
-}
-
-return true;
-}
-                    </code>
+  }
+  return true;
+}</code>
                 </pre>
             </div>
             <div class="my-skills">
@@ -90,49 +106,49 @@ return true;
                     <li>
                         <h4>HTML5</h4>
                         <p>90%</p>
-                        <div class="scale">
+                        <div class="scale" id='html'>
                             <span class="scale-filling"></span>
                         </div>
                     </li>
                     <li>
                         <h4>CSS3</h4>
                         <p>70%</p>
-                        <div class="scale">
+                        <div class="scale" id='css'>
                             <span class="scale-filling"></span>
                         </div>
                     </li>
                     <li>
                         <h4>Javascript</h4>
                         <p>50%</p>
-                        <div class="scale">
+                        <div class="scale" id='js'>
                             <span class="scale-filling"></span>
                         </div>
                     </li>
                     <li>
                         <h4>Python</h4>
-                        <p>60%</p>
-                        <div class="scale">
+                        <p>70%</p>
+                        <div class="scale" id='py'>
                             <span class="scale-filling"></span>
                         </div>
                     </li>
                     <li>
                         <h4>С++</h4>
                         <p>50%</p>
-                        <div class="scale">
+                        <div class="scale" id='c'>
                             <span class="scale-filling"></span>
                         </div>
                     </li>
                     <li>
                         <h4>Git</h4>
-                        <p>40%</p>
-                        <div class="scale">
+                        <p>60%</p>
+                        <div class="scale" id='git'>
                             <span class="scale-filling"></span>
                         </div>
                     </li>
                     <li>
-                        <h4>Playing games & binge-watching anime</h4>
+                        <h4>PC games & binging anime</h4>
                         <p>200%</p>
-                        <div class="scale">
+                        <div class="scale" id='best'>
                             <span class="scale-filling"></span>
                         </div>
                     </li>
@@ -142,11 +158,6 @@ return true;
         <section class='education-and-languages'>
             <div class='languages'>
                 <h3>Languages</h3>
-                <!-- ЗАМЕНИТЬ НА ТАБЛИЦУ !!!!! -->
-                <!-- ЗАМЕНИТЬ НА ТАБЛИЦУ !!!!! -->
-                <!-- ЗАМЕНИТЬ НА ТАБЛИЦУ !!!!! -->
-                <!-- ЗАМЕНИТЬ НА ТАБЛИЦУ !!!!! -->
-                <!-- ЗАМЕНИТЬ НА ТАБЛИЦУ !!!!! -->
                 <ul class="languages-list">
                     <li>
                         <div class="language-name">
@@ -188,18 +199,18 @@ return true;
             </div>
             <div class='education'>
                 <h3>Education</h3>
-                <ul class="education-list"> <!-- Можно увеличить количество li -->
+                <ul class="education-list">
                     <li>
-                        <h4>BSU, Mech. & Math. Fac., 2nd course</h4>
-                        <img src="" alt="">
+                        <h4><span>BSU</span>, Mech-Math Faculty</h4>
+                        <img src="assets/images/BSU.svg" alt="BSU.svg" class="BSU-img">
                     </li>
                     <li>
-                        <h4>education...</h4> <!-- ХЗ -->
-                        <img src="" alt="">
+                        <h4><span>Gymn. 17</span> of Minsk</h4>
+                        <img src="assets/images/gymn.png" alt="gymnasium.png" class="gymn-img">
                     </li>
                     <li>
-                        <h4>education...</h4> <!-- ХЗ -->
-                        <img src="" alt="">
+                        <h4>The <span>RS</span> School</h4>
+                        <img src="assets/images/RSS.jpg" alt="RSS.jpg" class="RSS-img">
                     </li>
                 </ul>
             </div>

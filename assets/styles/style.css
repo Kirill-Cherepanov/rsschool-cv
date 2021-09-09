@@ -1,125 +1,266 @@
 :root {
-    --main-color: #292826 ;
-    --secondary-color: #212018;
-    --third-color: #f9d342;
+    --primary-color: #292826 ;
+    --bg-color: #292826;
+    --secondary-color: #f9d342; /* Можно изменить */
+    --third-color: #393836;
+    --forth-color: #505050;
+    --super-color: #FF4040;
 }
 * {
     color: #FFFFFF;
+    margin: 0;
+    padding: 0;
 }
 body {
     font-family: 'Sarabun', sans-serif;
     box-sizing: border-box;
-    background-color: var(--main-color);
+    background-color: var(--bg-color);
 }
-h1, h2, h4, h5, p, ul, pre {
-    margin: 8px 0px;
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    margin: auto;
+    background-color: var(--primary-color);
 }
-p, ul, pre {
+p, ul, table {
     font-size: 1.2rem;
-}
-ul, ol {
-    padding: 0px;
 }
 li {
     list-style-type: none;
 }
 a {
-    text-decoration: none;
-    &:hover {
-        color: ;
-    }
-    &:active {
-        color: ;
-    }
+    text-decoration:none;
+    color: var(--secondary-color);
+}
+a:hover {
+    color:white;
+}
+a:active {
+    color: white;
 }
 b {
     font-weight: 600;
 }
 h1 {
-    color: var(--third-color);
+    margin: 0;
+    color: var(--secondary-color);
     font-size: 2.5rem;
-    font-weight: 800;
     font-family: 'Poiret One', cursive;
 }
 h2 {
-    font-weight: 500;
-    font-style: italic;
+    font-family: 'Poiret One', cursive;
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin-top: 4px;
+    padding-bottom: 21px;
 }
 h3 {
-    font-family: 'Poiret One', cursive;
-    color: var(--third-color);
-    margin: 32px 0px 8px;
+    font-family: 'Sarabun', sans-serif;
+    color: var(--secondary-color);
+    margin: 8px 0px;
     font-size: 2rem;
+    font-weight: 400;
+    border-bottom: 2px solid var(--secondary-color)
 }
 h4 {
     font-size: 1rem;
 }
-.container {
+.contacts, .about-me, .code-example, .my-skills, section.education-and-languages  {
+    padding: 10px 20px 20px 20px;
+}
+section {
+    padding: 40px 0;
+    margin: 0;
+}
+section:nth-of-type(2n - 1) {
+    background-color: var(--third-color);
+}
+
+/* Me */
+section.me {
+    padding: 30px 0 40px;
     display: flex;
-    flex-direction: column;
-    width: 1200px;
-    margin: auto;
-}
-header img {
-    border: 10px solid var(--secondary-color);
-    box-shadow: 0px 0px 15px 15px var(--secondary-color);
-    border-radius: 50%;
-}
-ul.contacts {
-    font-weight: 100;
+    flex-direction: row;
+    justify-content: center;
 }
 header {
+    margin-right: 20px;
+    width: 335px;
+    height: 100%;
     text-align: center;
+    display: inline-block;
+}
+header img {
+    border: 10px solid var(--primary-color);
+    border-radius: 50%;
+}
+.contacts {
+    margin-top: 11px;
+    padding: 10px;
+    border-top: 1px solid var(--forth-color);
+}
+table.contacts {
+    margin: 0;
+    text-align: left;
+    border: none;
+}
+table.contacts th {
+    width: 50%;
+    font-weight: 100;
+}
+.about-me {
+    display: inline-block;
+    padding: 20px;
+    width: 50%;
+    height: 536px;
+    border-left: 1px solid var(--forth-color);
 }
 .about-me p {
+    margin-top: 1rem;
     text-align: justify;
 }
+
+/* My abilities */
+section.my-abilities {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+/* Code example */
+.code-example {
+    width: 65%;
+    border-right: 1px solid var(--forth-color);
+}
 .code-example pre {
+    padding-left: 0 10px;
+    margin-top: 10px;
+    font-size: 1rem;
     font-style: italic;
     font-weight: 100;
 }
+/* My skills */
+.my-skills {
+    width: 35%;
+}
+ul.stat-list li {
+    margin: 20px 0 25px;
+}
+ul.stat-list li h4 {
+    font-size: 1.2rem;
+}
+ul.stat-list li p {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+ul.stat-list li:last-of-type p {
+    color: var(--super-color);
+    font-size: 0.9rem;
+}
+ul.stat-list .scale {
+    width: 100%;
+    height: 10px;
+    margin-top: 5px;
+    background-color: var(--primary-color);
+}
+ul.stat-list span {
+    height:100%;
+    display: block;
+    background-color: var(--secondary-color);
+}
+#html span {
+    width:90%;
+}
+#css span {
+    width:70%;
+}
+#js span {
+    width:50%;
+}
+#py span {
+    width:70%;
+}
+#c span {
+    width:50%;
+}
+#git span {
+    width:60%;
+}
+#best span {
+    background-color: var(--super-color);
+    width:100%;
+}
 
 /* Ed & Languages */
-/* Заменить ul на table !!! */
-/* Заменить ul на table !!! */
-/* Заменить ul на table !!! */
-/* Заменить ul на table !!! */
-/* Заменить ul на table !!! */
-
+section.education-and-languages h3 {
+    border: none;
+}
 .languages {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.languages h3 {
-    margin: 0;
+.language-name {
+    padding: 0 15px;
+    border-left: 1px solid var(--forth-color);
 }
-ul.languages-list {
-    width: 1000px;
+.language-name h5 {
+    margin-top: 4px;
+    font-style: italic;
+    font-weight: 100;
+    color: var(--secondary-color)
 }
 ul.languages-list li {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 8px 0;
+    border-top: 1px solid var(--forth-color);
 }
-.languages p { 
-    width: 800px;
+ul.languages-list li:first-of-type {
+    border-top: none;
+}
+ul.languages-list p {
+    padding-left: 10px;
+    border-left: 1px solid var(--forth-color);
+    width: 500px;
 }
 
 .education {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
+    padding-top: 40px;
 }
 .education h3 {
     margin: 0;
+    width: 235px;
+    display: inline-block;
+    position: relative;
+    top: 60px;
 }
 ul.education-list {
-    width: 1000px;
+    display: inline-flex;
+    width: 700px;
+    justify-content: space-between;
 }
 ul.education-list li {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    text-align: center;
+    padding: 0 15px;
+}
+ul.education-list li h4 {
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+ul.education-list li h4 span {
+    color: var(--secondary-color);
+}
+ul.education-list li .BSU-img {
+    margin-top: 32px;
+    width: 265px;
+}
+.RSS-img {
+    width: 160px;
+}
+.gymn-img {
+    width: 120px;
+    height: 160px;
 }
