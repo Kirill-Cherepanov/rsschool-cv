@@ -22,7 +22,18 @@ body {
     margin: auto;
     background-color: var(--primary-color);
 }
+section {
+    padding: 40px 0;
+    margin: 0;
+}
+section:nth-of-type(2n - 1) {
+    background-color: var(--third-color);
+}
+.contacts, .about-me, .code-example, .my-skills, section.education-and-languages  {
+    padding: 10px 20px 20px 20px;
+}
 p, ul, table {
+    line-height: 1.8rem;
     font-size: 1.2rem;
 }
 li {
@@ -58,27 +69,18 @@ h3 {
     font-family: 'Sarabun', sans-serif;
     color: var(--secondary-color);
     margin: 8px 0px;
+    padding-bottom: 4px;
     font-size: 2rem;
     font-weight: 400;
-    border-bottom: 2px solid var(--secondary-color)
+    border-bottom: 2px solid var(--secondary-color);
 }
 h4 {
     font-size: 1rem;
 }
-.contacts, .about-me, .code-example, .my-skills, section.education-and-languages  {
-    padding: 10px 20px 20px 20px;
-}
-section {
-    padding: 40px 0;
-    margin: 0;
-}
-section:nth-of-type(2n - 1) {
-    background-color: var(--third-color);
-}
 
 /* Me */
 section.me {
-    padding: 30px 0 40px;
+    padding: 20px 0 40px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -90,10 +92,28 @@ header {
     text-align: center;
     display: inline-block;
 }
-header img {
+.avatar {
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    line-height: 250px;
+    background-color: var(--primary-color);
+    border-radius: 50%; 
+    -moz-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.blank {
+    color: var(--secondary-color);
+    font-size: 80px;
+    vertical-align: middle;
+}
+/* header img {
     border: 10px solid var(--primary-color);
     border-radius: 50%;
-}
+} */
 .contacts {
     margin-top: 11px;
     padding: 10px;
@@ -112,7 +132,6 @@ table.contacts th {
     display: inline-block;
     padding: 20px;
     width: 50%;
-    height: 536px;
     border-left: 1px solid var(--forth-color);
 }
 .about-me p {
@@ -143,14 +162,16 @@ section.my-abilities {
     width: 35%;
 }
 ul.stat-list li {
-    margin: 20px 0 25px;
+    margin: 30px 0 37px;
 }
 ul.stat-list li h4 {
     font-size: 1.2rem;
+    line-height: 1.3rem;
 }
 ul.stat-list li p {
     color: var(--secondary-color);
     font-size: 0.9rem;
+    line-height: 1.3rem;
 }
 ul.stat-list li:last-of-type p {
     color: var(--super-color);
@@ -160,7 +181,7 @@ ul.stat-list .scale {
     width: 100%;
     height: 10px;
     margin-top: 5px;
-    background-color: var(--primary-color);
+    background-color: var(--third-color);
 }
 ul.stat-list span {
     height:100%;
@@ -193,6 +214,7 @@ ul.stat-list span {
 /* Ed & Languages */
 section.education-and-languages h3 {
     border: none;
+    margin: 0;
 }
 .languages {
     display: flex;
@@ -203,8 +225,10 @@ section.education-and-languages h3 {
     padding: 0 15px;
     border-left: 1px solid var(--forth-color);
 }
+.language-name h4, .language-name h5 {
+    line-height: 1.3rem;
+}
 .language-name h5 {
-    margin-top: 4px;
     font-style: italic;
     font-weight: 100;
     color: var(--secondary-color)
@@ -230,20 +254,19 @@ ul.languages-list p {
     padding-top: 40px;
 }
 .education h3 {
-    margin: 0;
     width: 235px;
     display: inline-block;
     position: relative;
-    top: 60px;
+    top: 85px;
+    padding: 0;
 }
 ul.education-list {
     display: inline-flex;
-    width: 700px;
+    width: 720px;
     justify-content: space-between;
 }
 ul.education-list li {
     text-align: center;
-    padding: 0 15px;
 }
 ul.education-list li h4 {
     margin-top: 15px;
@@ -281,4 +304,19 @@ footer ul li:first-of-type {
 li.footer-item a img {
     height: 48px;
     padding: 0 8px;
+}
+
+/* Selection modification */
+.me *::selection,  .education-and-languages *::selection {
+    background-color: var(--primary-color);
+}
+.my-abilities *::selection, footer *::selection {
+    background-color: var(--third-color);
+}
+img {
+    -moz-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
