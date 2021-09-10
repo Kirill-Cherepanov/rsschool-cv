@@ -1,1 +1,1 @@
-https://KissMyUSSR.github.io/rsschool-cv/cv
+https://KissMyUSSR.github.io/rsschool-cv/
