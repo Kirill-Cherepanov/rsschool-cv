@@ -52,6 +52,10 @@ a:active {
 b {
     font-weight: 600;
 }
+mark {
+    background-color: inherit;
+    color: var(--secondary-color);
+}
 h1 {
     margin: 0;
     color: var(--secondary-color);
@@ -110,10 +114,7 @@ header {
     font-size: 80px;
     vertical-align: middle;
 }
-/* header img {
-    border: 10px solid var(--primary-color);
-    border-radius: 50%;
-} */
+/* Contacts */
 .contacts {
     margin-top: 11px;
     padding: 10px;
@@ -128,6 +129,7 @@ table.contacts th {
     width: 50%;
     font-weight: 100;
 }
+/* About me */
 .about-me {
     display: inline-block;
     padding: 20px;
@@ -150,9 +152,11 @@ section.my-abilities {
     width: 65%;
     border-right: 1px solid var(--forth-color);
 }
-.code-example pre {
+figcaption {
+    margin: 15px 0px 5px;
+}
+.code-example pre, figcaption {
     padding-left: 0 10px;
-    margin-top: 10px;
     font-size: 1rem;
     font-style: italic;
     font-weight: 100;
@@ -216,6 +220,7 @@ section.education-and-languages h3 {
     border: none;
     margin: 0;
 }
+/* Languages */
 .languages {
     display: flex;
     align-items: center;
@@ -248,7 +253,7 @@ ul.languages-list p {
     border-left: 1px solid var(--forth-color);
     width: 500px;
 }
-
+/* Education */
 .education {
     justify-content: space-between;
     padding-top: 40px;
@@ -271,9 +276,6 @@ ul.education-list li {
 ul.education-list li h4 {
     margin-top: 15px;
     font-size: 1.1rem;
-}
-ul.education-list li h4 span {
-    color: var(--secondary-color);
 }
 ul.education-list li .BSU-img {
     margin-top: 32px;
@@ -325,21 +327,15 @@ img {
 ::-webkit-scrollbar {
     width: 12px;
   }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: var(--primary-color); 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+::-webkit-scrollbar-thumb {
     background: var(--forth-color); 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+}
+::-webkit-scrollbar-thumb:hover {
     background: #707070; 
-  }
-  ::-webkit-scrollbar-thumb:active {
+}
+::-webkit-scrollbar-thumb:active {
     background: var(--secondary-color); 
-  }
+}

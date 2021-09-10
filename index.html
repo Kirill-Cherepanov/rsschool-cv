@@ -16,7 +16,6 @@
         <section class='me'>
             <header>
                 <div class='avatar'><span class='blank'>『 』</span></div>
-                <!-- <img src='assets/images/Portrait.jpg' alt='avatar' width='250' height='250'> -->
                 <h1>Kirill Cherepanov</h1>
                 <h2>Front-end Developer (Beginner)</h2>
                 <div class="contacts">
@@ -24,23 +23,23 @@
                     <table class='contacts'>
                         <tr>
                             <th><b>Location</b></th>
-                            <td>Belarus, Minsk</th>
+                            <td>Belarus, Minsk</td>
                         </tr>
                         <tr>
                             <th><b>Email</b></th>
-                            <td><a href="mailto:cherkirr@gmail.com" target='_blank'>cherkirr@gmail.com</a></th>
+                            <td><a href="mailto:cherkirr@gmail.com" target='_blank'>cherkirr@gmail.com</a></td>
                         </tr>
                         <tr>
                             <th><b>GitHub</b></th>
-                            <td><a href="https://github.com/KissMyUSSR" target='_blank'>@KissMyUSSR</a></th>
+                            <td><a href="https://github.com/KissMyUSSR" target='_blank'>@KissMyUSSR</a></td>
                         </tr>
                         <tr>
                             <th><b>VK</b></th>
-                            <td><a href="https://vk.com/kcherepanov1" target='_blank'>/kcherepanov1</a></th>
+                            <td><a href="https://vk.com/kcherepanov1" target='_blank'>/kcherepanov1</a></td>
                         </tr>
                         <tr>
                             <th><b>Discord</b></th>
-                            <td><a href="https://discordapp.com/users/292300959265062922" target='_blank'>Kot-pauk#6737</a></th>
+                            <td><a href="https://discordapp.com/users/292300959265062922" target='_blank'>Kot-pauk#6737</a></td>
                         </tr>
                     </table>
             </div>
@@ -58,21 +57,19 @@
         <section class='my-abilities'>
             <div class="code-example">
                 <h3>Code example</h3>
-                <pre>
-                    <code>
-// It's mildly inafficient but idc for now
-
-function sliceColumn(mat, index) {
+                <figure>
+                    <figcaption><a href="https://www.codewars.com/kata/529bf0e9bdf7657179000008/javascript" target="_blank">// Sudoku Solution Validator</a></figcaption>
+<pre><code>function sliceColumn(mat, index) {
   let column = [];
-  for (let i = 0; i < mat.length; i++) {
+  for (let i = 0; i &lt; mat.length; i++) {
     column.push(mat[i][index]);
   }
   return column;
 }
 function validSolution(board) {
   let checkArr = [];
-  for (let i = 0; i < 9; i++) {
-    for (let j = 0; j < 9; j++) {
+  for (let i = 0; i &lt; 9; i++) {
+    for (let j = 0; j &lt; 9; j++) {
       if ((board[i].slice(0, j) + 
         board[i].slice(j + 1, 9)).includes(board[i][j])) {
         return false;
@@ -83,9 +80,9 @@ function validSolution(board) {
       }
     }
   }
-  for (let i = 0; i < 7; i+=3) {
-    for (let j = 0; j < 7; j+=3) {
-      for(let t = 0; t < 9; t++) {
+  for (let i = 0; i &lt; 7; i+=3) {
+    for (let j = 0; j &lt; 7; j+=3) {
+      for(let t = 0; t &lt; 9; t++) {
         if (checkArr.includes(board[i + t % 3][j + (t - t % 3)/3])) {
           return false;
         }
@@ -95,8 +92,9 @@ function validSolution(board) {
     }
   }
   return true;
-}</code>
-                </pre>
+}</code></pre>
+
+                </figure>
             </div>
             <div class="my-skills">
                 <h3>My skills</h3>
@@ -198,15 +196,15 @@ function validSolution(board) {
             <div class='education'>
                 <h3>Education</h3><ul class="education-list"> <!--written that there's no blank space between 'em-->
                     <li>
-                        <h4><span>BSU</span>, Mech-Math Faculty</h4>
+                        <h4><mark>BSU</mark>, Mech-Math Faculty</h4>
                         <img src="assets/images/BSU.svg" alt="BSU.svg" class="BSU-img">
                     </li>
                     <li>
-                        <h4><span>Gymn. 17</span> of Minsk</h4>
+                        <h4><mark>Gymn. 17</mark> of Minsk</h4>
                         <img src="assets/images/gymn.png" alt="gymnasium.png" class="gymn-img">
                     </li>
                     <li>
-                        <h4>The <span>RS</span> School</h4>
+                        <h4>The <mark>RS</mark> School</h4>
                         <img src="assets/images/RSS.jpg" alt="RSS.jpg" class="RSS-img">
                     </li>
                 </ul>
