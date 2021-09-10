@@ -320,3 +320,26 @@ img {
     -ms-user-select: none;
     user-select: none;
 }
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--primary-color); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--forth-color); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #707070; 
+  }
+  ::-webkit-scrollbar-thumb:active {
+    background: var(--secondary-color); 
+  }
