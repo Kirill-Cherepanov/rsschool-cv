@@ -1,0 +1,345 @@
+:root {
+    --primary-color: #292826 ;
+    --secondary-color: #f9d342;
+    --third-color: #393836;
+    --forth-color: #505050;
+    --super-color: #FF4040;
+}
+* {
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Sarabun', sans-serif;
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    margin: auto;
+    background-color: var(--primary-color);
+}
+section {
+    padding: 40px 0;
+    margin: 0;
+}
+section:nth-of-type(2n - 1) {
+    background-color: var(--third-color);
+}
+.contacts, .about-me, .code-example, .my-skills, section.education-and-languages  {
+    padding: 10px 20px 20px 20px;
+}
+p, ul, table {
+    line-height: 1.8rem;
+    font-size: 1.2rem;
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration:none;
+    color: var(--secondary-color);
+}
+a:hover {
+    color:white;
+}
+a:active {
+    color: white;
+}
+b {
+    font-weight: 600;
+}
+h1 {
+    margin: 0;
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    font-family: 'Poiret One', cursive;
+}
+h2 {
+    font-family: 'Poiret One', cursive;
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin-top: 4px;
+    padding-bottom: 21px;
+}
+h3 {
+    font-family: 'Sarabun', sans-serif;
+    color: var(--secondary-color);
+    margin: 8px 0px;
+    padding-bottom: 4px;
+    font-size: 2rem;
+    font-weight: 400;
+    border-bottom: 2px solid var(--secondary-color);
+}
+h4 {
+    font-size: 1rem;
+}
+
+/* Me */
+section.me {
+    padding: 20px 0 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+header {
+    margin-right: 20px;
+    width: 335px;
+    height: 100%;
+    text-align: center;
+    display: inline-block;
+}
+.avatar {
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    line-height: 250px;
+    background-color: var(--primary-color);
+    border-radius: 50%; 
+    -moz-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.blank {
+    color: var(--secondary-color);
+    font-size: 80px;
+    vertical-align: middle;
+}
+/* header img {
+    border: 10px solid var(--primary-color);
+    border-radius: 50%;
+} */
+.contacts {
+    margin-top: 11px;
+    padding: 10px;
+    border-top: 1px solid var(--forth-color);
+}
+table.contacts {
+    margin: 0;
+    text-align: left;
+    border: none;
+}
+table.contacts th {
+    width: 50%;
+    font-weight: 100;
+}
+.about-me {
+    display: inline-block;
+    padding: 20px;
+    width: 50%;
+    border-left: 1px solid var(--forth-color);
+}
+.about-me p {
+    margin-top: 1rem;
+    text-align: justify;
+}
+
+/* My abilities */
+section.my-abilities {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+/* Code example */
+.code-example {
+    width: 65%;
+    border-right: 1px solid var(--forth-color);
+}
+.code-example pre {
+    padding-left: 0 10px;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 100;
+}
+/* My skills */
+.my-skills {
+    width: 35%;
+}
+ul.stat-list li {
+    margin: 30px 0 37px;
+}
+ul.stat-list li h4 {
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+}
+ul.stat-list li p {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+}
+ul.stat-list li:last-of-type p {
+    color: var(--super-color);
+    font-size: 0.9rem;
+}
+ul.stat-list .scale {
+    width: 100%;
+    height: 10px;
+    margin-top: 5px;
+    background-color: var(--third-color);
+}
+ul.stat-list span {
+    height:100%;
+    display: block;
+    background-color: var(--secondary-color);
+}
+#html span {
+    width:90%;
+}
+#css span {
+    width:70%;
+}
+#js span {
+    width:50%;
+}
+#py span {
+    width:70%;
+}
+#c span {
+    width:50%;
+}
+#git span {
+    width:60%;
+}
+#best span {
+    background-color: var(--super-color);
+    width:100%;
+}
+
+/* Ed & Languages */
+section.education-and-languages h3 {
+    border: none;
+    margin: 0;
+}
+.languages {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.language-name {
+    padding: 0 15px;
+    border-left: 1px solid var(--forth-color);
+}
+.language-name h4, .language-name h5 {
+    line-height: 1.3rem;
+}
+.language-name h5 {
+    font-style: italic;
+    font-weight: 100;
+    color: var(--secondary-color)
+}
+ul.languages-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-top: 1px solid var(--forth-color);
+}
+ul.languages-list li:first-of-type {
+    border-top: none;
+}
+ul.languages-list p {
+    padding-left: 10px;
+    border-left: 1px solid var(--forth-color);
+    width: 500px;
+}
+
+.education {
+    justify-content: space-between;
+    padding-top: 40px;
+}
+.education h3 {
+    width: 235px;
+    display: inline-block;
+    position: relative;
+    top: 85px;
+    padding: 0;
+}
+ul.education-list {
+    display: inline-flex;
+    width: 720px;
+    justify-content: space-between;
+}
+ul.education-list li {
+    text-align: center;
+}
+ul.education-list li h4 {
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+ul.education-list li h4 span {
+    color: var(--secondary-color);
+}
+ul.education-list li .BSU-img {
+    margin-top: 32px;
+    width: 265px;
+}
+.RSS-img {
+    width: 160px;
+}
+.gymn-img {
+    width: 120px;
+    height: 160px;
+}
+
+/* Footer */
+footer {
+    padding: 24px 20px;
+}
+footer ul {
+    display: flex;
+    justify-content: space-between;
+}
+footer ul li:first-of-type {
+    color: var(--secondary-color);
+    font-weight: 800;
+    font-size: 40px;
+    font-style: italic;
+}
+li.footer-item a img {
+    height: 48px;
+    padding: 0 8px;
+}
+
+/* Selection modification */
+.me *::selection,  .education-and-languages *::selection {
+    background-color: var(--primary-color);
+}
+.my-abilities *::selection, footer *::selection {
+    background-color: var(--third-color);
+}
+img {
+    -moz-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--primary-color); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--forth-color); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #707070; 
+  }
+  ::-webkit-scrollbar-thumb:active {
+    background: var(--secondary-color); 
+  }

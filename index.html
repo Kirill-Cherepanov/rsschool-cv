@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cherepanov Kirill CV</title>
+    <link rel="stylesheet" href="assets/styles/normalize.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class='container'>
+        <section class='me'>
+            <header>
+                <div class='avatar'><span class='blank'>『 』</span></div>
+                <!-- <img src='assets/images/Portrait.jpg' alt='avatar' width='250' height='250'> -->
+                <h1>Kirill Cherepanov</h1>
+                <h2>Front-end Developer (Beginner)</h2>
+                <div class="contacts">
+                    <h3>Contacts</h3>
+                    <table class='contacts'>
+                        <tr>
+                            <th><b>Location</b></th>
+                            <td>Belarus, Minsk</th>
+                        </tr>
+                        <tr>
+                            <th><b>Email</b></th>
+                            <td><a href="mailto:cherkirr@gmail.com" target='_blank'>cherkirr@gmail.com</a></th>
+                        </tr>
+                        <tr>
+                            <th><b>GitHub</b></th>
+                            <td><a href="https://github.com/KissMyUSSR" target='_blank'>@KissMyUSSR</a></th>
+                        </tr>
+                        <tr>
+                            <th><b>VK</b></th>
+                            <td><a href="https://vk.com/kcherepanov1" target='_blank'>/kcherepanov1</a></th>
+                        </tr>
+                        <tr>
+                            <th><b>Discord</b></th>
+                            <td><a href="https://discordapp.com/users/292300959265062922" target='_blank'>Kot-pauk#6737</a></th>
+                        </tr>
+                    </table>
+            </div>
+            </header>
+            <div class='about-me'>
+                <h3>About me</h3>
+                <p>
+                    Since the very day I was born, I have been spending a lot of time playing video games. But one horrible day, the unthinkable happened: I realized that my PC sucks and I could no longer play my games. Thus I resolved to become a web developer to earn some money for a living and for a new PC to proceed with my beloved lifestyle.
+                </p>
+                <p>
+                    I'm just joking. I consider myself a reliable person. I love helping others to the point that one may even call me altruistic. Though, I do make an effort not to help others when it might hurt me. I love learning new stuff and especially new technologies. Therefore I've decided to commit myself to learning programming. I'm not too good at design right now. But I hope that if I keep building websites, I can eventually become a professional Ui & Ux designer. If I like doing something, I may spend 16 hours a day doing it (if I have all this time). Also, I'm quite profficient at Math; it comes easily for me. I have good English-speaking skills too, but later on that.
+                </p>
+            </div>
+        </section>
+        <section class='my-abilities'>
+            <div class="code-example">
+                <h3>Code example</h3>
+                <pre>
+                    <code>
+// It's mildly inafficient but idc for now
+
+function sliceColumn(mat, index) {
+  let column = [];
+  for (let i = 0; i < mat.length; i++) {
+    column.push(mat[i][index]);
+  }
+  return column;
+}
+function validSolution(board) {
+  let checkArr = [];
+  for (let i = 0; i < 9; i++) {
+    for (let j = 0; j < 9; j++) {
+      if ((board[i].slice(0, j) + 
+        board[i].slice(j + 1, 9)).includes(board[i][j])) {
+        return false;
+      }
+      if ((sliceColumn(board, i).slice(0, j) + 
+        sliceColumn(board, i).slice(j + 1, 9)).includes(board[j][i])) {
+        return false;
+      }
+    }
+  }
+  for (let i = 0; i < 7; i+=3) {
+    for (let j = 0; j < 7; j+=3) {
+      for(let t = 0; t < 9; t++) {
+        if (checkArr.includes(board[i + t % 3][j + (t - t % 3)/3])) {
+          return false;
+        }
+        checkArr.push(board[i + t % 3][j + (t - t % 3)/3]);
+      }
+      checkArr = [];
+    }
+  }
+  return true;
+}</code>
+                </pre>
+            </div>
+            <div class="my-skills">
+                <h3>My skills</h3>
+                <ul class='stat-list'> <!-- Class можно изменить -->
+                    <li>
+                        <h4>HTML5</h4>
+                        <p>90%</p>
+                        <div class="scale" id='html'>
+                            <span class="scale-filling"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>CSS3</h4>
+                        <p>70%</p>
+                        <div class="scale" id='css'>
+                            <span class="scale-filling"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Javascript</h4>
+                        <p>50%</p>
+                        <div class="scale" id='js'>
+                            <span class="scale-filling"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Python</h4>
+                        <p>70%</p>
+                        <div class="scale" id='py'>
+                            <span class="scale-filling"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>С++</h4>
+                        <p>50%</p>
+                        <div class="scale" id='c'>
+                            <span class="scale-filling"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Git</h4>
+                        <p>60%</p>
+                        <div class="scale" id='git'>
+                            <span class="scale-filling"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>PC games & binging anime</h4>
+                        <p>200%</p>
+                        <div class="scale" id='best'>
+                            <span class="scale-filling"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class='education-and-languages'>
+            <div class='languages'>
+                <h3>Languages</h3>
+                <ul class="languages-list">
+                    <li>
+                        <div class="language-name">
+                            <h4>English</h4>
+                            <h5>B2-C1</h5>
+                        </div>
+                        <p>
+                            I'm quite profficient at it and the online tests that I participated in showed that I have an advanced C1-C2 level. Though I don't trust these tests much and I've never taken any reliable tests e.g. CEFR, IELTS or something
+                        </p>
+                    </li>
+                    <li>
+                        <div class="language-name">
+                            <h4>Русский (Russian)</h4>
+                            <h5>Native</h5>
+                        </div>
+                        <p>
+                            I've been speaking Russian since a young age so, I'm good at it. I scored 84/100 on our national exam without much preparation
+                        </p>
+                    </li>
+                    <li>
+                        <div class="language-name">
+                            <h4>日本 (Japanese)</h4>
+                            <h5>Beginner</h5>
+                        </div>
+                        <p>
+                            I only know the very basics, but I'd really like to learn it if I had enough time
+                        </p>
+                    </li>
+                    <li>
+                        <div class="language-name">
+                            <h4>Беларускi (Belarussian)</h4>
+                            <h5>Embarassingly bad</h5>
+                        </div>
+                        <p>
+                            Even though I'm Belarussian, I know Japanese better than my "native" language, because I never learned it at school and none of my acquaintances talk on it
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class='education'>
+                <h3>Education</h3><ul class="education-list"> <!--written that there's no blank space between 'em-->
+                    <li>
+                        <h4><span>BSU</span>, Mech-Math Faculty</h4>
+                        <img src="assets/images/BSU.svg" alt="BSU.svg" class="BSU-img">
+                    </li>
+                    <li>
+                        <h4><span>Gymn. 17</span> of Minsk</h4>
+                        <img src="assets/images/gymn.png" alt="gymnasium.png" class="gymn-img">
+                    </li>
+                    <li>
+                        <h4>The <span>RS</span> School</h4>
+                        <img src="assets/images/RSS.jpg" alt="RSS.jpg" class="RSS-img">
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <footer>
+            <ul>
+                <li class='footer-item'>2021</li>
+                <li class='footer-item'>
+                    <span class='footer-item'>
+                        <a class='footer-vk' href="https://vk.com/kcherepanov1/" target='_blank'><img src="assets/icons/icon-vk.png" alt="icon-vk.png"></a>
+                    </span>
+                    <span class='footer-item'>
+                        <a class='footer-gh' href="https://github.com/kissMyUSSR/" target='_blank'><img src="assets/icons/icon-gh.png" alt="icon-github.png"></a>
+                    </span><span class='footer-item'>
+                        <a class='footer-ds' href="https://discordapp.com/users/292300959265062922" target='_blank'><img src="assets/icons/icon-ds.png" alt="icon-discord.png"></a>
+                    </span>
+                </li>
+                <li class='footer-item'>
+                    <a class='footer-rss' href="https://rs.school/js/" target='_blank'><img src="assets/icons/icon-rss.svg" alt="icon-RS-School.svg"></a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>

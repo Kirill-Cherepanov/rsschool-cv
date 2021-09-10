@@ -63,7 +63,7 @@ function validSolution(board) {
 * *And youtube lectures which I can't remember*
 
 ## **Languages**
-* **English** - I'm quite profficient at it and the online tests that I participated in showed that I have an advanced C1-C2 level. Though I don't trust these tests much and I've never taken any reliable tests e.g. IELTS or something.
+* **English** - I'm quite profficient at it and the online tests that I participated in showed that I have an advanced C1-C2 level. Though I don't trust these tests much and I've never taken any reliable tests e.g. CEFR, IELTS or something
 [![One of the test results](/images/My%20eng%20level.jpg)](https://www.facebook.com/permalink.php?story_fbid=3024079811203680&id=100008050725980)
 * **Russian** - Native.
 * **Japanese** - the very basics, but I'd really like to learn it if I had enough time.
