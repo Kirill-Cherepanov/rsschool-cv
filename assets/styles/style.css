@@ -1,7 +1,6 @@
 :root {
     --primary-color: #292826 ;
-    --bg-color: #292826;
-    --secondary-color: #f9d342; /* Можно изменить */
+    --secondary-color: #f9d342;
     --third-color: #393836;
     --forth-color: #505050;
     --super-color: #FF4040;
@@ -14,7 +13,7 @@
 body {
     font-family: 'Sarabun', sans-serif;
     box-sizing: border-box;
-    background-color: var(--bg-color);
+    background-color: var(--primary-color);
 }
 .container {
     display: flex;
@@ -263,4 +262,23 @@ ul.education-list li .BSU-img {
 .gymn-img {
     width: 120px;
     height: 160px;
+}
+
+/* Footer */
+footer {
+    padding: 24px 20px;
+}
+footer ul {
+    display: flex;
+    justify-content: space-between;
+}
+footer ul li:first-of-type {
+    color: var(--secondary-color);
+    font-weight: 800;
+    font-size: 40px;
+    font-style: italic;
+}
+li.footer-item a img {
+    height: 48px;
+    padding: 0 8px;
 }
