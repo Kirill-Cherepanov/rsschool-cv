@@ -327,15 +327,15 @@ img {
 ::-webkit-scrollbar {
     width: 12px;
   }
-  ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: var(--primary-color); 
-  }
-  ::-webkit-scrollbar-thumb {
+}
+::-webkit-scrollbar-thumb {
     background: var(--forth-color); 
-  }
-  ::-webkit-scrollbar-thumb:hover {
+}
+::-webkit-scrollbar-thumb:hover {
     background: #707070; 
-  }
-  ::-webkit-scrollbar-thumb:active {
+}
+::-webkit-scrollbar-thumb:active {
     background: var(--secondary-color); 
-  }
+}
