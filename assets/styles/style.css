@@ -114,10 +114,7 @@ header {
     font-size: 80px;
     vertical-align: middle;
 }
-/* header img {
-    border: 10px solid var(--primary-color);
-    border-radius: 50%;
-} */
+/* Contacts */
 .contacts {
     margin-top: 11px;
     padding: 10px;
@@ -132,6 +129,7 @@ table.contacts th {
     width: 50%;
     font-weight: 100;
 }
+/* About me */
 .about-me {
     display: inline-block;
     padding: 20px;
@@ -222,6 +220,7 @@ section.education-and-languages h3 {
     border: none;
     margin: 0;
 }
+/* Languages */
 .languages {
     display: flex;
     align-items: center;
@@ -254,7 +253,7 @@ ul.languages-list p {
     border-left: 1px solid var(--forth-color);
     width: 500px;
 }
-
+/* Education */
 .education {
     justify-content: space-between;
     padding-top: 40px;
@@ -328,18 +327,12 @@ img {
 ::-webkit-scrollbar {
     width: 12px;
   }
-  
-  /* Track */
   ::-webkit-scrollbar-track {
     background: var(--primary-color); 
   }
-   
-  /* Handle */
   ::-webkit-scrollbar-thumb {
     background: var(--forth-color); 
   }
-  
-  /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #707070; 
   }
