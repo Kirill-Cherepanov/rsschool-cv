@@ -52,6 +52,10 @@ a:active {
 b {
     font-weight: 600;
 }
+mark {
+    background-color: inherit;
+    color: var(--secondary-color);
+}
 h1 {
     margin: 0;
     color: var(--secondary-color);
@@ -150,9 +154,11 @@ section.my-abilities {
     width: 65%;
     border-right: 1px solid var(--forth-color);
 }
-.code-example pre {
+figcaption {
+    margin: 15px 0px 5px;
+}
+.code-example pre, figcaption {
     padding-left: 0 10px;
-    margin-top: 10px;
     font-size: 1rem;
     font-style: italic;
     font-weight: 100;
@@ -271,9 +277,6 @@ ul.education-list li {
 ul.education-list li h4 {
     margin-top: 15px;
     font-size: 1.1rem;
-}
-ul.education-list li h4 span {
-    color: var(--secondary-color);
 }
 ul.education-list li .BSU-img {
     margin-top: 32px;
