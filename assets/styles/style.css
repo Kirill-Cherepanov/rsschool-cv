@@ -109,8 +109,8 @@ header {
     -ms-user-select: none;
     user-select: none;
 }
-.blank {
-    color: var(--secondary-color);
+.avatar img {
+    color: #f9d342;
     font-size: 80px;
     vertical-align: middle;
 }
@@ -120,13 +120,14 @@ header {
     padding: 10px;
     border-top: 1px solid var(--forth-color);
 }
-table.contacts {
+ul.contacts {
     margin: 0;
     text-align: left;
     border: none;
 }
-table.contacts th {
-    width: 50%;
+ul.contacts li b {
+    display: inline-block;
+    width: 40%;
     font-weight: 100;
 }
 /* About me */
